@@ -102,7 +102,7 @@
                                                             <td>{{$syllabus->syllabus_name}}</td>
                                                             <td>
                                                                 <div class="btn-group" role="group">
-                                                                    <a href="{{asset('storage/'.$syllabus->syllabus_file_path)}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i> Download</a>
+                                                                    <a href="{{secure_asset('storage/'.$syllabus->syllabus_file_path)}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i> Download</a>
                                                                 </div>
                                                             </td>
                                                             </tr>
