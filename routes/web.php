@@ -175,6 +175,7 @@ Route::middleware(['auth'])->group(function () {
 
     // Courses
     Route::get('courses/teacher/index', [AssignedTeacherController::class, 'getTeacherCourses'])->name('course.teacher.list.show');
+    Route::get('courses/teacher/idd', [AssignedTeacherController::class, 'showcourse'])->name('course.show');
     Route::get('courses/student/index/{student_id}', [CourseController::class, 'getStudentCourses'])->name('course.student.list.show');
     Route::get('course/edit/{id}', [CourseController::class, 'edit'])->name('course.edit');
 

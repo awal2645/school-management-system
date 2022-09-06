@@ -75,6 +75,10 @@
                                 <label for="inputNationality" class="form-label">Nationality<sup><i class="bi bi-asterisk text-primary"></i></sup></label>
                                 <input type="text" class="form-control" id="inputNationality" name="nationality" placeholder="e.g. Bangladeshi, German, ..." required value="{{old('nationality')}}">
                             </div>
+                            <div class="col-md-6">
+                                <label for="" class="form-label"> Fees</label>
+                                <input type="number" class="form-control" id="" name="fees" placeholder=" Fees " required >
+                            </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-person-plus"></i> Add</button>
                             </div>

@@ -33,7 +33,7 @@
                                 <tr>
                                     <td>
                                         @if (isset($teacher->photo))
-                                            <img src="{{secure_asset('/storage'.$teacher->photo)}}" class="rounded" alt="Profile picture" height="30" width="30">
+                                            <img src="{{asset('/storage'.$teacher->photo)}}" class="rounded" alt="Profile picture" height="30" width="30">
                                         @else
                                             <i class="bi bi-person-square"></i>
                                         @endif

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<script src="{{ secure_asset('js/masonry.pkgd.min.js') }}"></script>
+<script src="{{ asset('js/masonry.pkgd.min.js') }}"></script>
 <div class="container">
     <div class="row justify-content-start">
         @include('layouts.left-menu')

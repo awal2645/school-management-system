@@ -14,18 +14,7 @@
                             <li class="breadcrumb-item active" aria-current="page">Classes</li>
                         </ol>
                     </nav>
-                    <div class="row">
-                        <form class="col-6" action="{{route('school.class.update')}}" method="POST">
-                            @csrf
-                            <input type="hidden" name="session_id" value="">
-                            <input type="hidden" name="class_id" value="">
-                            <div class="mb-3">
-                                <label for="class_name" class="form-label">Class Name</label>
-                                <input class="form-control" id="class_name" name="class_name" type="text" value="">
-                            </div>
-                            <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Save</button>
-                        </form>
-                    </div>
+                    
                     <div class="row">
                         @isset($school_classes)
                             @foreach ($school_classes as $school_class)
@@ -102,7 +91,7 @@
                                                             <td>{{$syllabus->syllabus_name}}</td>
                                                             <td>
                                                                 <div class="btn-group" role="group">
-                                                                    <a href="{{secure_asset('storage/'.$syllabus->syllabus_file_path)}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i> Download</a>
+                                                                    <a href="{{asset('storage/'.$syllabus->syllabus_file_path)}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i> Download</a>
                                                                 </div>
                                                             </td>
                                                             </tr>

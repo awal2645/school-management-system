@@ -4,11 +4,11 @@
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('home')? 'active' : '' }}" href="{{url('home')}}"><i class="ms-auto bi bi-grid"></i> <span class="ms-1 d-inline d-sm-none d-md-none d-xl-inline">{{ __('Dashboard') }}</span></a>
                     </li>
-                    {{-- @if (Auth::user()->role == "teacher")
+                    @if (Auth::user()->role == "teacher")
                     <li class="nav-item">
                         <a type="button" href="{{url('attendances')}}" class="d-flex nav-link {{ request()->is('attendances*')? 'active' : '' }}"><i class="bi bi-calendar2-week"></i> <span class="ms-2 d-inline d-sm-none d-md-none d-xl-inline">Attendance</span></a>
                     </li>
-                    @endif --}}
+                    @endif
                     @can('view classes')
                     <li class="nav-item">
                         @php
@@ -50,11 +50,12 @@
                         </ul>
                     </li>
                     @endif
-                    @if(Auth::user()->role == "teacher")
+                    @if(Auth::user()->role == "admin" ||Auth::user()->role == "teacher")
                     <li class="nav-item">
                         <a class="nav-link {{ (request()->is('courses/teacher*') || request()->is('courses/assignments*'))? 'active' : '' }}" href="{{route('course.teacher.list.show', ['teacher_id' => Auth::user()->id])}}"><i class="bi bi-journal-medical"></i> <span class="ms-1 d-inline d-sm-none d-md-none d-xl-inline">My Courses</span></a>
                     </li>
                     @endif
+                 
                     @if(Auth::user()->role == "student")
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('student.attendance.show')? 'active' : '' }}" href="{{route('student.attendance.show', ['id' => Auth::user()->id])}}"><i class="bi bi-calendar2-week"></i> <span class="ms-1 d-inline d-sm-none d-md-none d-xl-inline">Attendance</span></a>

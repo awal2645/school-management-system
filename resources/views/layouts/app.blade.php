@@ -9,24 +9,24 @@
 
     <title>TexLabIt</title>
 
-    <link rel="shortcut icon" href="{{secure_asset('favicon_io/favicon.ico')}}">
-    <link rel="shortcut icon" sizes="16x16" href="{{secure_asset('favicon_io/favicon-16x16.png')}}">
-    <link rel="shortcut icon" sizes="32x32" href="{{secure_asset('favicon_io/favicon-32x32.png')}}">
-    <link rel="apple-touch-icon" href="{{secure_asset('favicon_io/apple-touch-icon.png')}}">
-    <link rel="icon" href="{{secure_asset('favicon_io/android-chrome-192x192.png')}}" sizes="192x192">
-    <link rel="icon" href="{{secure_asset('favicon_io/android-chrome-512x512.png')}}" sizes="512x512">
+    <link rel="shortcut icon" href="{{asset('favicon_io/favicon.ico')}}">
+    <link rel="shortcut icon" sizes="16x16" href="{{asset('favicon_io/favicon-16x16.png')}}">
+    <link rel="shortcut icon" sizes="32x32" href="{{asset('favicon_io/favicon-32x32.png')}}">
+    <link rel="apple-touch-icon" href="{{asset('favicon_io/apple-touch-icon.png')}}">
+    <link rel="icon" href="{{asset('favicon_io/android-chrome-192x192.png')}}" sizes="192x192">
+    <link rel="icon" href="{{asset('favicon_io/android-chrome-512x512.png')}}" sizes="512x512">
 
     <!-- Scripts -->
-    <script src="{{ secure_asset('js/bootstrap.bundle.min.js') }}"></script>
-    <!-- <script src="{{ secure_asset('js/app.js') }}" defer></script> -->
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
    
-    <link href="{{ secure_asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">

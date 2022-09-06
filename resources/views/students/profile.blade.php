@@ -30,9 +30,9 @@
                                 <div class="card bg-light">
                                     <div class="px-5 pt-2">
                                         @if (isset($student->photo))
-                                            <img src="{{secure_asset('/storage'.$student->photo)}}" class="rounded-3 card-img-top" alt="Profile photo">
+                                            <img src="{{asset('/storage'.$student->photo)}}" class="rounded-3 card-img-top" alt="Profile photo">
                                         @else
-                                            <img src="{{secure_asset('imgs/profile.png')}}" class="rounded-3 card-img-top" alt="Profile photo">
+                                            <img src="{{asset('imgs/profile.png')}}" class="rounded-3 card-img-top" alt="Profile photo">
                                         @endif
                                     </div>
                                     <div class="card-body">
@@ -125,7 +125,7 @@
                                                 <th scope="row">Class:</th>
                                                 <td>{{$promotion_info->section->schoolClass->class_name}}</td>
                                                 <th>Board Reg. No.:</th>
-                                                <td>{{$student->academic_info->board_reg_no}}</td>
+                                                {{-- <td>{{$student->academic_info->board_reg_no}}</td> --}}
                                             </tr>
                                             <tr>
                                                 <th scope="row">Section:</th>
